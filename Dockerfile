@@ -15,8 +15,7 @@ RUN apt-get update -y \
     lmodern \
   && rm -rf /var/lib/apt/lists/* \
   && chmod +x /docker-entrypoint.sh \
-  && cabal update && cabal install pandoc-${PANDOC_VERSION} \
-  && mkdir /source
+  && cabal update && cabal install pandoc-${PANDOC_VERSION}
 
 WORKDIR /source
 
